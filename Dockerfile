@@ -12,5 +12,6 @@ RUN apt-get install bwa bedtools -y
 
 # install guide-seq dependencies
 RUN mkdir guide_seq
-RUN cd guide_seq && git clone https://github.com/aryeelab/guideseq
+RUN cd guide_seq && git clone --recursive https://github.com/aryeelab/guideseq.git
 RUN cd guide_seq/guideseq && pip2 install -r requirements.txt
+
