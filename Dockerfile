@@ -1,0 +1,16 @@
+FROM ubuntu
+
+RUN apt-get update && apt-get dist-upgrade -y
+RUN apt-get install git -y
+
+# install python 2
+RUN apt-get install python2.7 python-pip -y
+
+# install all UMI, BWA and Bedtools
+RUN pip2 install umi 
+RUN apt-get install bwa bedtools -y
+
+# install guide-seq dependencies
+RUN mkdir guide_seq
+RUN cd guide_seq && git clone https://github.com/aryeelab/guideseq
+RUN cd guide_seq/guideseq && pip2 install -r requirements.txt
