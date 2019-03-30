@@ -15,3 +15,6 @@ RUN mkdir guide_seq
 RUN cd guide_seq && git clone --recursive https://github.com/aryeelab/guideseq.git
 RUN cd guide_seq/guideseq && pip2 install -r requirements.txt
 
+# run basic tests
+RUN cd guide_seq && cd guideseq && python2 guideseq/guideseq.py all -m test/test_manifest.yaml
+
