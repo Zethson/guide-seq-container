@@ -1,0 +1,10 @@
+sudo: required
+
+services:
+  - docker
+
+install:
+  - docker build -t guide_seq:latest .
+
+script:
+  - docker run --rm -it guide_seq:latest
