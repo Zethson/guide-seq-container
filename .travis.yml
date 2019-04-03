@@ -7,4 +7,4 @@ install:
   - docker build -t guide_seq:latest .
 
 script:
-  - docker run --rm -w /guideseq -t guide_seq:latest python2 guideseq/guideseq.py all -m test/test_manifest.yaml
+  - docker run --rm -w /guide_seq_wf -t guide_seq:latest python2 guideseq/guideseq.py all -m test/test_manifest.yaml
