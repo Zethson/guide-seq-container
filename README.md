@@ -1,4 +1,4 @@
-https://travis-ci.org/Zethson/guide-seq-container.svg?branch=master
+[![Build Status](https://travis-ci.org/Zethson/guide-seq-container.svg?branch=master)](https://travis-ci.org/Zethson/guide-seq-container)
 # Docker container for the guide-seq package
 This is a docker image for the GUIDE-Seq implementation from [Aryeelab](https://github.com/aryeelab/guideseq).
 # Usage 
