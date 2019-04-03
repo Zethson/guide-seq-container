@@ -1,6 +1,7 @@
 FROM ubuntu
 
 RUN apt-get update && apt-get dist-upgrade -y
+RUN apt-get install vim -y
 RUN apt-get install git -y
 
 # install python 2
@@ -9,9 +10,10 @@ RUN apt-get install python2.7 python-pip -y
 # install zlib dev, wget, unzip
 RUN apt-get install libz-dev wget unzip
 
-# install all UMI, BWA and Bedtools
+# install UMI
 RUN pip2 install umi 
 # RUN apt-get install bwa bedtools -y
+RUN pip2 install nose
 
 # Install bwa
 RUN git clone https://github.com/lh3/bwa.git
