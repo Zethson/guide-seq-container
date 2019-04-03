@@ -17,3 +17,21 @@ Then run the large test:
 ```bash
 python guideseq/guideseq/guideseq.py all -m test_manifest.yaml
 ```
+
+# Building a singularity image
+Often times singularity images are prefered over docker images to be able to run them in a HPC environment.
+You can build one by running
+```bash
+mkdir -p /tmp/singularity_output
+
+docker run -v /var/run/docker.sock:/var/run/docker.sock \
+-v /tmp/singularity_output:/output \
+--privileged -t --rm \
+singularityware/docker2singularity \
+guide_seq:latest
+```
+Now you can find your shiny new singularity image in /tmp/singularity_output
+
+
+
+
