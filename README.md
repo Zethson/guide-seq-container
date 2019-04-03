@@ -12,3 +12,8 @@ You can download a the reference genome using the download_reference_genome.sh s
 ./download_reference_genome.sh
 ./download_test_data.sh
 ```
+
+Then run the large test:
+```bash
+python guideseq/guideseq/guideseq.py all -m test_manifest.yaml
+```

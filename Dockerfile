@@ -18,14 +18,16 @@ RUN git clone https://github.com/lh3/bwa.git
 RUN cd bwa && \
     git checkout tags/0.7.9a && \
     make
-RUN PATH=`pwd`/bwa:$PATH
+ENV PATH /bwa:$PATH      
+
+
 
 # Install bedtools
 RUN git clone https://github.com/arq5x/bedtools2.git
 RUN cd bedtools2 && \
     git checkout tags/v2.25.0 && \
     make
-RUN PATH=`pwd`/bedtools2/bin:$PATH
+ENV PATH /bedtools2/bin:$PATH
 
 # Copy helper scripts
 COPY download_reference_genome.sh /download_reference_genome.sh
