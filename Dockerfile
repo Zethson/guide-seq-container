@@ -9,11 +9,13 @@ RUN apt-get install python2.7 python-pip -y
 
 # install zlib dev, wget, unzip
 RUN apt-get install libz-dev wget unzip
+#RUN apt-get install -y liblzma-dev
+#RUN apt-get install -y libbz2-dev
+#RUN apt-get install -y libncurses5-dev libncursesw5-dev
 
-# install UMI
-RUN pip2 install umi 
 # RUN apt-get install bwa bedtools -y
 RUN pip2 install nose
+RUN pip2 install numpy==1.14.1
 
 # Install bwa
 RUN git clone https://github.com/lh3/bwa.git
@@ -37,9 +39,8 @@ COPY download_test_data.sh /download_test_data.sh
 RUN chmod +x download_reference_genome.sh
 RUN chmod +x download_test_data.sh
 
-# install guide-seq dependencies
-RUN git clone --recursive https://github.com/aryeelab/guideseq.git
-RUN cd guideseq && pip2 install -r requirements.txt
-
+# install guide-seq with dependencies
+RUN git clone --recursive https://github.com/Zethson/guide_seq_wf
+RUN cd guide_seq_wf && pip2 install -r requirements.txt && pip freeze
 
 
