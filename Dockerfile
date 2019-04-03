@@ -20,8 +20,6 @@ RUN cd bwa && \
     make
 ENV PATH /bwa:$PATH      
 
-
-
 # Install bedtools
 RUN git clone https://github.com/arq5x/bedtools2.git
 RUN cd bedtools2 && \
@@ -41,6 +39,5 @@ RUN chmod +x download_test_data.sh
 RUN git clone --recursive https://github.com/aryeelab/guideseq.git
 RUN cd guideseq && pip2 install -r requirements.txt
 
-# run basic tests
-RUN cd guideseq && python2 guideseq/guideseq.py all -m test/test_manifest.yaml
+
 
