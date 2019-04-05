@@ -1,0 +1,344 @@
+Apr-05 17:51:16.392 [main] DEBUG nextflow.cli.Launcher - $> nextflow run nf-core/mhcquant -profile test,docker -r 1.2.6
+Apr-05 17:51:16.471 [main] INFO  nextflow.cli.CmdRun - N E X T F L O W  ~  version 19.01.0
+Apr-05 17:51:16.570 [main] INFO  nextflow.cli.CmdRun - Pulling nf-core/mhcquant ...
+Apr-05 17:51:16.571 [main] DEBUG nextflow.scm.RepositoryProvider - Request [credentials -:-] -> https://api.github.com/repos/nf-core/mhcquant/contents/nextflow.config
+Apr-05 17:51:17.924 [main] DEBUG nextflow.scm.RepositoryProvider - Request [credentials -:-] -> https://api.github.com/repos/nf-core/mhcquant/contents/main.nf
+Apr-05 17:51:18.304 [main] DEBUG nextflow.scm.RepositoryProvider - Request [credentials -:-] -> https://api.github.com/repos/nf-core/mhcquant
+Apr-05 17:51:18.553 [main] DEBUG nextflow.scm.AssetManager - Pulling nf-core/mhcquant -- Using remote clone url: https://github.com/nf-core/mhcquant.git
+Apr-05 17:51:28.254 [main] INFO  nextflow.cli.CmdRun -  downloaded from https://github.com/nf-core/mhcquant.git
+Apr-05 17:51:28.313 [main] DEBUG nextflow.scm.AssetManager - Git config: /home/zeth/.nextflow/assets/nf-core/mhcquant/.git/config; branch: master; remote: origin; url: https://github.com/nf-core/mhcquant.git
+Apr-05 17:51:28.314 [main] INFO  nextflow.cli.CmdRun - Launching `nf-core/mhcquant` [crazy_boyd] - revision: 124cbbe5a0 [1.2.6]
+Apr-05 17:51:28.325 [main] DEBUG nextflow.config.ConfigBuilder - Found config base: /home/zeth/.nextflow/assets/nf-core/mhcquant/nextflow.config
+Apr-05 17:51:28.326 [main] DEBUG nextflow.config.ConfigBuilder - Parsing config file: /home/zeth/.nextflow/assets/nf-core/mhcquant/nextflow.config
+Apr-05 17:51:28.333 [main] DEBUG nextflow.config.ConfigBuilder - Applying config profile: `test,docker`
+Apr-05 17:51:28.603 [main] DEBUG nextflow.config.ConfigBuilder - Available config profiles: [standard, cfc, uzh, debug, test, singularity, awsbatch, none, docker, binac]
+Apr-05 17:51:28.629 [main] DEBUG nextflow.Session - Session uuid: 0f2d276e-a73d-4ecd-a59b-d970a23c3b16
+Apr-05 17:51:28.630 [main] DEBUG nextflow.Session - Run name: crazy_boyd
+Apr-05 17:51:28.632 [main] DEBUG nextflow.Session - Executor pool size: 4
+Apr-05 17:51:28.656 [main] DEBUG nextflow.cli.CmdRun - 
+  Version: 19.01.0 build 5050
+  Modified: 22-01-2019 11:19 UTC (12:19 CEST)
+  System: Linux 5.0.5-arch1-1-ARCH
+  Runtime: Groovy 2.5.5 on OpenJDK 64-Bit Server VM 11.0.3+4
+  Encoding: UTF-8 (UTF-8)
+  Process: 19480@master [192.168.178.61]
+  CPUs: 4 - Mem: 15.4 GB (2.5 GB) - Swap: 0 (0)
+Apr-05 17:51:28.689 [main] DEBUG nextflow.Session - Work-dir: /home/zeth/docker_images/guide_seq_container/work [ext2/ext3]
+Apr-05 17:51:28.865 [main] DEBUG nextflow.Session - Session start invoked
+Apr-05 17:51:28.868 [main] DEBUG nextflow.processor.TaskDispatcher - Dispatcher > start
+Apr-05 17:51:28.870 [main] DEBUG nextflow.trace.TraceFileObserver - Flow starting -- trace file: /home/zeth/docker_images/guide_seq_container/results/pipeline_info/nf-core/mhcquant_trace.txt
+Apr-05 17:51:28.880 [main] DEBUG nextflow.script.ScriptRunner - > Script parsing
+Apr-05 17:51:29.665 [main] DEBUG nextflow.script.ScriptRunner - > Launching execution
+Apr-05 17:51:29.872 [main] INFO  nextflow.Nextflow - =======================================================
+                                          ,--./,-.
+          ___     __   __   __   ___     /,-._.--~'
+    |\ | |__  __ /  ` /  \ |__) |__         }  {
+    | \| |       \__, \__/ |  \ |___     \`-._,-`-,
+                                          `._,._,'
+
+nf-core/mhcquant v1.2.6"
+=======================================================
+Apr-05 17:51:29.881 [main] INFO  nextflow.Nextflow - Pipeline Name  : nf-core/mhcquant
+Pipeline Version: 1.2.6
+Run Name       : crazy_boyd
+mzMLs          : [https://github.com/nf-core/test-datasets/raw/mhcquant/MM15_Melanom_1_A_1.mzML, https://github.com/nf-core/test-datasets/raw/mhcquant/MM15_Melanom_1_B_1.mzML, https://github.com/nf-core/test-datasets/raw/mhcquant/MM15_Melanom_2_A_1.mzML, https://github.com/nf-core/test-datasets/raw/mhcquant/MM15_Melanom_2_B_1.mzML]
+Fasta Ref      : [https://github.com/nf-core/test-datasets/raw/mhcquant/test.fasta]
+Predictions    : false
+SubsetFDR      : false
+Alleles        : [https://github.com/nf-core/test-datasets/raw/mhcquant/alleles.tsv]
+Variants       : [https://github.com/nf-core/test-datasets/raw/mhcquant/GRIAFFLKY_snpeff.vcf]
+Centroidisation: false
+Max Memory     : 6 GB
+Max CPUs       : 2
+Max Time       : 2d
+Output dir     : ./results
+Working dir    : /home/zeth/docker_images/guide_seq_container/work
+Container Engine: docker
+Container      : nfcore/mhcquant:1.2.6
+Current home   : /home/zeth
+Current user   : zeth
+Current path   : /home/zeth/docker_images/guide_seq_container
+Script dir     : /home/zeth/.nextflow/assets/nf-core/mhcquant
+Config Profile : test,docker
+Apr-05 17:51:29.884 [main] INFO  nextflow.Nextflow - =========================================
+Apr-05 17:51:29.932 [main] DEBUG nextflow.processor.ProcessFactory - << taskConfig executor: null
+Apr-05 17:51:29.932 [main] DEBUG nextflow.processor.ProcessFactory - >> processorType: 'local'
+Apr-05 17:51:29.937 [main] DEBUG nextflow.executor.Executor - Initializing executor: local
+Apr-05 17:51:29.938 [main] INFO  nextflow.executor.Executor - [warm up] executor > local
+Apr-05 17:51:29.942 [main] DEBUG n.processor.LocalPollingMonitor - Creating local task monitor for executor 'local' > cpus=4; memory=15.4 GB; capacity=4; pollInterval=100ms; dumpInterval=5m
+Apr-05 17:51:29.946 [main] DEBUG nextflow.processor.TaskDispatcher - Starting monitor: LocalPollingMonitor
+Apr-05 17:51:29.947 [main] DEBUG n.processor.TaskPollingMonitor - >>> barrier register (monitor: local)
+Apr-05 17:51:29.955 [main] DEBUG nextflow.executor.Executor - Invoke register for executor: local
+Apr-05 17:51:29.984 [main] DEBUG nextflow.Session - >>> barrier register (process: output_documentation)
+Apr-05 17:51:29.987 [main] DEBUG nextflow.processor.TaskProcessor - Creating operator > output_documentation -- maxForks: 4
+Apr-05 17:51:30.050 [main] DEBUG nextflow.processor.ProcessFactory - << taskConfig executor: null
+Apr-05 17:51:30.052 [main] DEBUG nextflow.processor.ProcessFactory - >> processorType: 'local'
+Apr-05 17:51:30.055 [main] DEBUG nextflow.executor.Executor - Initializing executor: local
+Apr-05 17:51:30.058 [main] DEBUG nextflow.Session - >>> barrier register (process: generate_proteins_from_vcf)
+Apr-05 17:51:30.066 [main] DEBUG nextflow.processor.TaskProcessor - Creating operator > generate_proteins_from_vcf -- maxForks: 4
+Apr-05 17:51:30.111 [Actor Thread 1] DEBUG nextflow.Session - <<< barrier arrive (process: generate_proteins_from_vcf)
+Apr-05 17:51:30.120 [main] DEBUG nextflow.processor.ProcessFactory - << taskConfig executor: null
+Apr-05 17:51:30.122 [main] DEBUG nextflow.processor.ProcessFactory - >> processorType: 'local'
+Apr-05 17:51:30.124 [main] DEBUG nextflow.executor.Executor - Initializing executor: local
+Apr-05 17:51:30.125 [main] DEBUG nextflow.Session - >>> barrier register (process: generate_decoy_database)
+Apr-05 17:51:30.127 [main] DEBUG nextflow.processor.TaskProcessor - Creating operator > generate_decoy_database -- maxForks: 4
+Apr-05 17:51:30.143 [main] DEBUG nextflow.processor.ProcessFactory - << taskConfig executor: null
+Apr-05 17:51:30.144 [main] DEBUG nextflow.processor.ProcessFactory - >> processorType: 'local'
+Apr-05 17:51:30.145 [main] DEBUG nextflow.executor.Executor - Initializing executor: local
+Apr-05 17:51:30.146 [main] DEBUG nextflow.Session - >>> barrier register (process: peak_picking)
+Apr-05 17:51:30.148 [main] DEBUG nextflow.processor.TaskProcessor - Creating operator > peak_picking -- maxForks: 4
+Apr-05 17:51:30.162 [main] DEBUG nextflow.util.CacheHelper - Config settings `withName:db_search_comet` matches process db_search_comet
+Apr-05 17:51:30.170 [main] DEBUG nextflow.processor.ProcessFactory - << taskConfig executor: null
+Apr-05 17:51:30.171 [main] DEBUG nextflow.processor.ProcessFactory - >> processorType: 'local'
+Apr-05 17:51:30.171 [main] DEBUG nextflow.executor.Executor - Initializing executor: local
+Apr-05 17:51:30.172 [main] DEBUG nextflow.Session - >>> barrier register (process: db_search_comet)
+Apr-05 17:51:30.172 [main] DEBUG nextflow.processor.TaskProcessor - Creating operator > db_search_comet -- maxForks: 4
+Apr-05 17:51:30.177 [Actor Thread 1] DEBUG nextflow.Session - <<< barrier arrive (process: peak_picking)
+Apr-05 17:51:30.194 [main] DEBUG nextflow.processor.ProcessFactory - << taskConfig executor: null
+Apr-05 17:51:30.195 [main] DEBUG nextflow.processor.ProcessFactory - >> processorType: 'local'
+Apr-05 17:51:30.198 [main] DEBUG nextflow.executor.Executor - Initializing executor: local
+Apr-05 17:51:30.203 [main] DEBUG nextflow.Session - >>> barrier register (process: index_peptides)
+Apr-05 17:51:30.204 [main] DEBUG nextflow.processor.TaskProcessor - Creating operator > index_peptides -- maxForks: 4
+Apr-05 17:51:30.215 [main] DEBUG nextflow.processor.ProcessFactory - << taskConfig executor: null
+Apr-05 17:51:30.216 [main] DEBUG nextflow.processor.ProcessFactory - >> processorType: 'local'
+Apr-05 17:51:30.216 [main] DEBUG nextflow.executor.Executor - Initializing executor: local
+Apr-05 17:51:30.217 [main] DEBUG nextflow.Session - >>> barrier register (process: calculate_fdr_for_idalignment)
+Apr-05 17:51:30.217 [main] DEBUG nextflow.processor.TaskProcessor - Creating operator > calculate_fdr_for_idalignment -- maxForks: 4
+Apr-05 17:51:30.225 [main] DEBUG nextflow.processor.ProcessFactory - << taskConfig executor: null
+Apr-05 17:51:30.227 [main] DEBUG nextflow.processor.ProcessFactory - >> processorType: 'local'
+Apr-05 17:51:30.228 [main] DEBUG nextflow.executor.Executor - Initializing executor: local
+Apr-05 17:51:30.230 [main] DEBUG nextflow.Session - >>> barrier register (process: filter_fdr_for_idalignment)
+Apr-05 17:51:30.233 [main] DEBUG nextflow.processor.TaskProcessor - Creating operator > filter_fdr_for_idalignment -- maxForks: 4
+Apr-05 17:51:30.251 [main] DEBUG nextflow.processor.ProcessFactory - << taskConfig executor: null
+Apr-05 17:51:30.251 [main] DEBUG nextflow.processor.ProcessFactory - >> processorType: 'local'
+Apr-05 17:51:30.252 [main] DEBUG nextflow.executor.Executor - Initializing executor: local
+Apr-05 17:51:30.260 [main] DEBUG nextflow.Session - >>> barrier register (process: align_ids)
+Apr-05 17:51:30.260 [main] DEBUG nextflow.processor.TaskProcessor - Creating operator > align_ids -- maxForks: 4
+Apr-05 17:51:30.332 [main] DEBUG nextflow.processor.ProcessFactory - << taskConfig executor: null
+Apr-05 17:51:30.333 [main] DEBUG nextflow.processor.ProcessFactory - >> processorType: 'local'
+Apr-05 17:51:30.333 [main] DEBUG nextflow.executor.Executor - Initializing executor: local
+Apr-05 17:51:30.333 [main] DEBUG nextflow.Session - >>> barrier register (process: align_mzml_files)
+Apr-05 17:51:30.333 [main] DEBUG nextflow.processor.TaskProcessor - Creating operator > align_mzml_files -- maxForks: 4
+Apr-05 17:51:30.343 [main] DEBUG nextflow.processor.ProcessFactory - << taskConfig executor: null
+Apr-05 17:51:30.343 [main] DEBUG nextflow.processor.ProcessFactory - >> processorType: 'local'
+Apr-05 17:51:30.343 [main] DEBUG nextflow.executor.Executor - Initializing executor: local
+Apr-05 17:51:30.349 [main] DEBUG nextflow.Session - >>> barrier register (process: align_idxml_files)
+Apr-05 17:51:30.349 [main] DEBUG nextflow.processor.TaskProcessor - Creating operator > align_idxml_files -- maxForks: 4
+Apr-05 17:51:30.356 [main] DEBUG nextflow.processor.ProcessFactory - << taskConfig executor: null
+Apr-05 17:51:30.356 [main] DEBUG nextflow.processor.ProcessFactory - >> processorType: 'local'
+Apr-05 17:51:30.362 [main] DEBUG nextflow.executor.Executor - Initializing executor: local
+Apr-05 17:51:30.363 [main] DEBUG nextflow.Session - >>> barrier register (process: merge_aligned_idxml_files)
+Apr-05 17:51:30.363 [main] DEBUG nextflow.processor.TaskProcessor - Creating operator > merge_aligned_idxml_files -- maxForks: 4
+Apr-05 17:51:30.372 [main] DEBUG nextflow.processor.ProcessFactory - << taskConfig executor: null
+Apr-05 17:51:30.373 [main] DEBUG nextflow.processor.ProcessFactory - >> processorType: 'local'
+Apr-05 17:51:30.373 [main] DEBUG nextflow.executor.Executor - Initializing executor: local
+Apr-05 17:51:30.373 [main] DEBUG nextflow.Session - >>> barrier register (process: extract_psm_features_for_percolator)
+Apr-05 17:51:30.373 [main] DEBUG nextflow.processor.TaskProcessor - Creating operator > extract_psm_features_for_percolator -- maxForks: 4
+Apr-05 17:51:30.380 [main] DEBUG nextflow.util.CacheHelper - Config settings `withName:run_percolator` matches process run_percolator
+Apr-05 17:51:30.386 [main] DEBUG nextflow.processor.ProcessFactory - << taskConfig executor: null
+Apr-05 17:51:30.386 [main] DEBUG nextflow.processor.ProcessFactory - >> processorType: 'local'
+Apr-05 17:51:30.386 [main] DEBUG nextflow.executor.Executor - Initializing executor: local
+Apr-05 17:51:30.387 [main] DEBUG nextflow.Session - >>> barrier register (process: run_percolator)
+Apr-05 17:51:30.387 [main] DEBUG nextflow.processor.TaskProcessor - Creating operator > run_percolator -- maxForks: 4
+Apr-05 17:51:30.387 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Apr-05 17:51:30.389 [main] DEBUG nextflow.processor.ProcessFactory - << taskConfig executor: null
+Apr-05 17:51:30.399 [main] DEBUG nextflow.processor.ProcessFactory - >> processorType: 'local'
+Apr-05 17:51:30.399 [main] DEBUG nextflow.executor.Executor - Initializing executor: local
+Apr-05 17:51:30.399 [main] DEBUG nextflow.Session - >>> barrier register (process: filter_by_q_value)
+Apr-05 17:51:30.399 [main] DEBUG nextflow.processor.TaskProcessor - Creating operator > filter_by_q_value -- maxForks: 4
+Apr-05 17:51:30.407 [main] DEBUG nextflow.processor.ProcessFactory - << taskConfig executor: null
+Apr-05 17:51:30.407 [main] DEBUG nextflow.processor.ProcessFactory - >> processorType: 'local'
+Apr-05 17:51:30.408 [main] DEBUG nextflow.executor.Executor - Initializing executor: local
+Apr-05 17:51:30.410 [main] DEBUG nextflow.Session - >>> barrier register (process: filter_by_q_value_first)
+Apr-05 17:51:30.411 [main] DEBUG nextflow.processor.TaskProcessor - Creating operator > filter_by_q_value_first -- maxForks: 4
+Apr-05 17:51:30.417 [main] DEBUG nextflow.processor.ProcessFactory - << taskConfig executor: null
+Apr-05 17:51:30.417 [main] DEBUG nextflow.processor.ProcessFactory - >> processorType: 'local'
+Apr-05 17:51:30.417 [main] DEBUG nextflow.executor.Executor - Initializing executor: local
+Apr-05 17:51:30.421 [main] DEBUG nextflow.Session - >>> barrier register (process: export_mztab_perc)
+Apr-05 17:51:30.422 [main] DEBUG nextflow.processor.TaskProcessor - Creating operator > export_mztab_perc -- maxForks: 4
+Apr-05 17:51:30.430 [Task submitter] INFO  nextflow.Session - [71/a7088d] Submitted process > output_documentation
+Apr-05 17:51:30.444 [main] DEBUG nextflow.processor.ProcessFactory - << taskConfig executor: null
+Apr-05 17:51:30.445 [main] DEBUG nextflow.processor.ProcessFactory - >> processorType: 'local'
+Apr-05 17:51:30.446 [main] DEBUG nextflow.executor.Executor - Initializing executor: local
+Apr-05 17:51:30.447 [main] DEBUG nextflow.Session - >>> barrier register (process: export_mztab_psm)
+Apr-05 17:51:30.501 [main] DEBUG nextflow.processor.TaskProcessor - Creating operator > export_mztab_psm -- maxForks: 4
+Apr-05 17:51:30.503 [main] DEBUG nextflow.processor.ProcessFactory - << taskConfig executor: null
+Apr-05 17:51:30.504 [main] DEBUG nextflow.processor.ProcessFactory - >> processorType: 'local'
+Apr-05 17:51:30.504 [main] DEBUG nextflow.executor.Executor - Initializing executor: local
+Apr-05 17:51:30.504 [main] DEBUG nextflow.Session - >>> barrier register (process: predict_psms)
+Apr-05 17:51:30.504 [main] DEBUG nextflow.processor.TaskProcessor - Creating operator > predict_psms -- maxForks: 4
+Apr-05 17:51:30.512 [Actor Thread 1] DEBUG nextflow.Session - <<< barrier arrive (process: predict_psms)
+Apr-05 17:51:30.514 [main] DEBUG nextflow.processor.ProcessFactory - << taskConfig executor: null
+Apr-05 17:51:30.514 [main] DEBUG nextflow.processor.ProcessFactory - >> processorType: 'local'
+Apr-05 17:51:30.514 [main] DEBUG nextflow.executor.Executor - Initializing executor: local
+Apr-05 17:51:30.525 [main] DEBUG nextflow.Session - >>> barrier register (process: filter_psms_by_predictions)
+Apr-05 17:51:30.527 [main] DEBUG nextflow.processor.TaskProcessor - Creating operator > filter_psms_by_predictions -- maxForks: 4
+Apr-05 17:51:30.530 [Actor Thread 1] DEBUG nextflow.Session - <<< barrier arrive (process: filter_psms_by_predictions)
+Apr-05 17:51:30.536 [main] DEBUG nextflow.processor.ProcessFactory - << taskConfig executor: null
+Apr-05 17:51:30.538 [main] DEBUG nextflow.processor.ProcessFactory - >> processorType: 'local'
+Apr-05 17:51:30.538 [main] DEBUG nextflow.executor.Executor - Initializing executor: local
+Apr-05 17:51:30.551 [main] DEBUG nextflow.Session - >>> barrier register (process: run_percolator_on_predicted_subset)
+Apr-05 17:51:30.552 [main] DEBUG nextflow.processor.TaskProcessor - Creating operator > run_percolator_on_predicted_subset -- maxForks: 4
+Apr-05 17:51:30.554 [Actor Thread 1] DEBUG nextflow.Session - <<< barrier arrive (process: run_percolator_on_predicted_subset)
+Apr-05 17:51:30.562 [main] DEBUG nextflow.processor.ProcessFactory - << taskConfig executor: null
+Apr-05 17:51:30.588 [main] DEBUG nextflow.processor.ProcessFactory - >> processorType: 'local'
+Apr-05 17:51:30.588 [main] DEBUG nextflow.executor.Executor - Initializing executor: local
+Apr-05 17:51:30.588 [main] DEBUG nextflow.Session - >>> barrier register (process: filter_refined_q_value)
+Apr-05 17:51:30.588 [main] DEBUG nextflow.processor.TaskProcessor - Creating operator > filter_refined_q_value -- maxForks: 4
+Apr-05 17:51:30.589 [Actor Thread 1] DEBUG nextflow.Session - <<< barrier arrive (process: filter_refined_q_value)
+Apr-05 17:51:30.593 [main] DEBUG nextflow.util.CacheHelper - Config settings `withName:quantify_identifications_targeted` matches process quantify_identifications_targeted
+Apr-05 17:51:30.594 [main] DEBUG nextflow.processor.ProcessFactory - << taskConfig executor: null
+Apr-05 17:51:30.594 [main] DEBUG nextflow.processor.ProcessFactory - >> processorType: 'local'
+Apr-05 17:51:30.594 [main] DEBUG nextflow.executor.Executor - Initializing executor: local
+Apr-05 17:51:30.594 [main] DEBUG nextflow.Session - >>> barrier register (process: quantify_identifications_targeted)
+Apr-05 17:51:30.594 [main] DEBUG nextflow.processor.TaskProcessor - Creating operator > quantify_identifications_targeted -- maxForks: 4
+Apr-05 17:51:30.603 [main] DEBUG nextflow.util.CacheHelper - Config settings `withName:link_extracted_features` matches process link_extracted_features
+Apr-05 17:51:30.613 [main] DEBUG nextflow.processor.ProcessFactory - << taskConfig executor: null
+Apr-05 17:51:30.614 [main] DEBUG nextflow.processor.ProcessFactory - >> processorType: 'local'
+Apr-05 17:51:30.614 [main] DEBUG nextflow.executor.Executor - Initializing executor: local
+Apr-05 17:51:30.615 [main] DEBUG nextflow.Session - >>> barrier register (process: link_extracted_features)
+Apr-05 17:51:30.616 [main] DEBUG nextflow.processor.TaskProcessor - Creating operator > link_extracted_features -- maxForks: 4
+Apr-05 17:51:30.624 [main] DEBUG nextflow.processor.ProcessFactory - << taskConfig executor: null
+Apr-05 17:51:30.625 [main] DEBUG nextflow.processor.ProcessFactory - >> processorType: 'local'
+Apr-05 17:51:30.625 [main] DEBUG nextflow.executor.Executor - Initializing executor: local
+Apr-05 17:51:30.630 [main] DEBUG nextflow.Session - >>> barrier register (process: resolve_conflicts)
+Apr-05 17:51:30.633 [main] DEBUG nextflow.processor.TaskProcessor - Creating operator > resolve_conflicts -- maxForks: 4
+Apr-05 17:51:30.642 [Task submitter] DEBUG nextflow.file.FilePorter - filePorter.maxThreads=4
+Apr-05 17:51:30.650 [main] DEBUG nextflow.processor.ProcessFactory - << taskConfig executor: null
+Apr-05 17:51:30.650 [main] DEBUG nextflow.processor.ProcessFactory - >> processorType: 'local'
+Apr-05 17:51:30.650 [main] DEBUG nextflow.executor.Executor - Initializing executor: local
+Apr-05 17:51:30.651 [main] DEBUG nextflow.Session - >>> barrier register (process: export_text)
+Apr-05 17:51:30.651 [main] DEBUG nextflow.processor.TaskProcessor - Creating operator > export_text -- maxForks: 4
+Apr-05 17:51:30.662 [FilePorter-1] DEBUG nextflow.file.FilePorter - filePorter.maxThreads=3
+Apr-05 17:51:30.663 [main] DEBUG nextflow.processor.ProcessFactory - << taskConfig executor: null
+Apr-05 17:51:30.663 [main] DEBUG nextflow.processor.ProcessFactory - >> processorType: 'local'
+Apr-05 17:51:30.663 [main] DEBUG nextflow.executor.Executor - Initializing executor: local
+Apr-05 17:51:30.663 [FilePorter-1] DEBUG nextflow.file.FilePorter - Copying foreign file https://github.com/nf-core/test-datasets/raw/mhcquant/test.fasta to work dir: /home/zeth/docker_images/guide_seq_container/work/03/3992ec1efc0e0bac95c11a97e5d871/tmp/56/6a481bfde71bdc79f048b9d37da249/test.fasta
+Apr-05 17:51:30.664 [main] DEBUG nextflow.Session - >>> barrier register (process: export_mztab)
+Apr-05 17:51:30.664 [main] DEBUG nextflow.processor.TaskProcessor - Creating operator > export_mztab -- maxForks: 4
+Apr-05 17:51:30.669 [main] DEBUG nextflow.processor.ProcessFactory - << taskConfig executor: null
+Apr-05 17:51:30.669 [main] DEBUG nextflow.processor.ProcessFactory - >> processorType: 'local'
+Apr-05 17:51:30.669 [main] DEBUG nextflow.executor.Executor - Initializing executor: local
+Apr-05 17:51:30.670 [main] DEBUG nextflow.Session - >>> barrier register (process: predict_peptides)
+Apr-05 17:51:30.670 [main] DEBUG nextflow.processor.TaskProcessor - Creating operator > predict_peptides -- maxForks: 4
+Apr-05 17:51:30.671 [Actor Thread 1] DEBUG nextflow.Session - <<< barrier arrive (process: predict_peptides)
+Apr-05 17:51:30.672 [main] DEBUG nextflow.script.ScriptRunner - > Await termination 
+Apr-05 17:51:30.672 [main] DEBUG nextflow.Session - Session await
+Apr-05 17:51:32.110 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 1; name: output_documentation; status: COMPLETED; exit: 0; error: -; workDir: /home/zeth/docker_images/guide_seq_container/work/71/a7088d93dae12d9b6ecab2ed72665b]
+Apr-05 17:51:32.138 [Actor Thread 1] DEBUG nextflow.Session - <<< barrier arrive (process: output_documentation)
+Apr-05 17:51:32.764 [Actor Thread 2] DEBUG nextflow.sort.BigSort - Sort completed -- entries: 4; slices: 1; internal sort time: 0.008 s; external sort time: 0.001 s; total time: 0.009 s
+Apr-05 17:51:33.853 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Apr-05 17:51:33.858 [Task submitter] INFO  nextflow.Session - [03/3992ec] Submitted process > generate_decoy_database (1)
+Apr-05 17:51:40.444 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 2; name: generate_decoy_database (1); status: COMPLETED; exit: 0; error: -; workDir: /home/zeth/docker_images/guide_seq_container/work/03/3992ec1efc0e0bac95c11a97e5d871]
+Apr-05 17:51:40.445 [Actor Thread 10] DEBUG nextflow.Session - <<< barrier arrive (process: generate_decoy_database)
+Apr-05 17:51:41.589 [FilePorter-1] DEBUG nextflow.file.FilePorter - filePorter.maxThreads=3
+Apr-05 17:51:41.589 [FilePorter-1] DEBUG nextflow.file.FilePorter - Copying foreign file https://github.com/nf-core/test-datasets/raw/mhcquant/MM15_Melanom_1_B_1.mzML to work dir: /home/zeth/docker_images/guide_seq_container/work/a7/a75a6514e89f866d3af65403ab039d/tmp/35/80b8393cc867d08a46ccda8ff4fdd4/MM15_Melanom_1_B_1.mzML
+Apr-05 17:51:49.980 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Apr-05 17:51:49.983 [Task submitter] INFO  nextflow.Session - [a7/a75a65] Submitted process > db_search_comet (3)
+Apr-05 17:51:49.990 [FilePorter-1] DEBUG nextflow.file.FilePorter - filePorter.maxThreads=3
+Apr-05 17:51:49.990 [FilePorter-1] DEBUG nextflow.file.FilePorter - Copying foreign file https://github.com/nf-core/test-datasets/raw/mhcquant/MM15_Melanom_1_A_1.mzML to work dir: /home/zeth/docker_images/guide_seq_container/work/bd/a7735226944076dd5769b28e72719b/tmp/a9/a2722d3ca77eb8d0614ec5a62e6a26/MM15_Melanom_1_A_1.mzML
+Apr-05 17:51:56.813 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 5; name: db_search_comet (3); status: COMPLETED; exit: 9; error: -; workDir: /home/zeth/docker_images/guide_seq_container/work/a7/a75a6514e89f866d3af65403ab039d]
+Apr-05 17:51:56.868 [Task monitor] ERROR nextflow.processor.TaskProcessor - Error executing process > 'db_search_comet (3)'
+
+Caused by:
+  Process `db_search_comet (3)` terminated with an error exit status (9)
+
+Command executed:
+
+  CometAdapter  -in MM15_Melanom_1_B_1.mzML \
+                -out MM15_Melanom_1_B_1.idXML \
+                -threads 2 \
+                -database test_decoy.fasta \
+                -precursor_mass_tolerance 5 \
+                -fragment_bin_tolerance 0.02 \
+                -fragment_bin_offset 0 \
+                -num_hits 1 \
+                -digest_mass_range 800:2500 \
+                -max_variable_mods_in_peptide 3 \
+                -allowed_missed_cleavages 0 \
+                -precursor_charge 2:3 \
+                -activation_method ALL \
+                -use_NL_ions true \
+                -variable_modifications 'Oxidation (M)' \
+                -fixed_modifications  \
+                -enzyme 'unspecific cleavage' \
+                -spectrum_batch_size 500
+
+Command exit status:
+  9
+
+Command output:
+  Version 2.4.0-HEAD-2018-10-26 of CometAdapter is available at www.OpenMS.de
+  Comet is writing the default parameter file...
+  Executing: comet.exe
+  Executed comet.exe successfully!
+  Progress of 'loading spectra list':
+  
+  -- done [took 0.71 s (CPU), 0.40 s (Wall)] -- 
+  Progress of 'loading chromatogram list':
+  
+  -- done [took 0.00 s (CPU), 0.00 s (Wall)] -- 
+  FATAL: External invocation of comet.exe failed. Standard output and error were:
+  <Executing: comet.exe> occurred 2 times
+   Comet version "2016.01 rev. 3"
+  
+  
+  
+  11
+  CometAdapter took 0.74 s (wall), 0.82 s (CPU), 0.02 s (system), 0.80 s (user).
+
+Command wrapper:
+  Version 2.4.0-HEAD-2018-10-26 of CometAdapter is available at www.OpenMS.de
+  Comet is writing the default parameter file...
+  Executing: comet.exe
+  Executed comet.exe successfully!
+  Progress of 'loading spectra list':
+  
+  -- done [took 0.71 s (CPU), 0.40 s (Wall)] -- 
+  Progress of 'loading chromatogram list':
+  
+  -- done [took 0.00 s (CPU), 0.00 s (Wall)] -- 
+  FATAL: External invocation of comet.exe failed. Standard output and error were:
+  <Executing: comet.exe> occurred 2 times
+   Comet version "2016.01 rev. 3"
+  
+  
+  
+  11
+  CometAdapter took 0.74 s (wall), 0.82 s (CPU), 0.02 s (system), 0.80 s (user).
+
+Work dir:
+  /home/zeth/docker_images/guide_seq_container/work/a7/a75a6514e89f866d3af65403ab039d
+
+Tip: view the complete command output by changing to the process work dir and entering the command `cat .command.out`
+Apr-05 17:51:56.875 [Task monitor] INFO  nextflow.Session - Execution cancelled -- Finishing pending tasks before exit
+Apr-05 17:51:56.888 [main] DEBUG nextflow.Session - Session await > all process finished
+Apr-05 17:51:56.902 [Actor Thread 13] DEBUG nextflow.Session - <<< barrier arrive (process: align_idxml_files)
+Apr-05 17:51:56.905 [Actor Thread 13] DEBUG nextflow.Session - <<< barrier arrive (process: merge_aligned_idxml_files)
+Apr-05 17:51:56.928 [Actor Thread 13] DEBUG nextflow.Session - <<< barrier arrive (process: run_percolator)
+Apr-05 17:51:56.929 [Actor Thread 13] DEBUG nextflow.Session - <<< barrier arrive (process: filter_by_q_value)
+Apr-05 17:51:56.931 [Actor Thread 13] DEBUG nextflow.Session - <<< barrier arrive (process: quantify_identifications_targeted)
+Apr-05 17:51:56.934 [Actor Thread 13] DEBUG nextflow.Session - <<< barrier arrive (process: link_extracted_features)
+Apr-05 17:51:56.938 [Actor Thread 21] DEBUG nextflow.Session - <<< barrier arrive (process: filter_by_q_value_first)
+Apr-05 17:51:56.938 [Actor Thread 13] DEBUG nextflow.Session - <<< barrier arrive (process: export_mztab_perc)
+Apr-05 17:51:56.939 [Actor Thread 10] DEBUG nextflow.Session - <<< barrier arrive (process: extract_psm_features_for_percolator)
+Apr-05 17:51:56.939 [Actor Thread 16] DEBUG nextflow.file.SortFileCollector - FileCollector temp dir not removed: null
+Apr-05 17:51:56.942 [Actor Thread 18] DEBUG nextflow.file.SortFileCollector - FileCollector temp dir not removed: null
+Apr-05 17:51:56.950 [Actor Thread 23] DEBUG nextflow.Session - <<< barrier arrive (process: resolve_conflicts)
+Apr-05 17:51:58.324 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Apr-05 17:51:58.325 [Task submitter] INFO  nextflow.Session - [bd/a77352] Submitted process > db_search_comet (1)
+Apr-05 17:52:01.603 [Actor Thread 2] DEBUG nextflow.file.FileCollector - Saved collect-files list to: /tmp/ab016d82a9144180c09f24e217dae879.collect-file
+Apr-05 17:52:01.608 [Actor Thread 2] DEBUG nextflow.file.FileCollector - Deleting file collector temp dir: /tmp/nxf-4391372660361684630
+Apr-05 17:52:04.564 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 3; name: db_search_comet (1); status: COMPLETED; exit: 9; error: -; workDir: /home/zeth/docker_images/guide_seq_container/work/bd/a7735226944076dd5769b28e72719b]
+Apr-05 17:52:18.330 [SIGINT handler] DEBUG nextflow.Session - Session aborted -- Cause: SIGINT
+Apr-05 17:52:18.359 [Task monitor] DEBUG n.processor.TaskPollingMonitor - <<< barrier arrives (monitor: local)
+Apr-05 17:52:18.359 [main] DEBUG nextflow.Session - Session await > all barriers passed
+Apr-05 17:52:18.399 [main] INFO  nextflow.Nextflow - [nf-core/mhcquant] Pipeline Complete
+Apr-05 17:52:18.402 [main] DEBUG nextflow.trace.StatsObserver - Workflow completed > WorkflowStats[succeedCount=2; failedCount=2; ignoredCount=0; cachedCount=0; succeedDuration=10.4s; failedDuration=8.1s; cachedDuration=0ms]
+Apr-05 17:52:18.402 [main] DEBUG nextflow.trace.TraceFileObserver - Flow completing -- flushing trace file
+Apr-05 17:52:18.404 [main] DEBUG nextflow.trace.ReportObserver - Flow completing -- rendering html report
+Apr-05 17:52:18.422 [main] DEBUG nextflow.trace.ReportObserver - Execution report summary data:
+  {"output_documentation":{"cpu":null,"mem":{"mean":260210688,"min":260210688,"q1":260210688,"q2":260210688,"q3":260210688,"max":260210688,"minLabel":"output_documentation","maxLabel":"output_documentation","q1Label":"output_documentation","q2Label":"output_documentation","q3Label":"output_documentation"},"time":{"mean":195,"min":195,"q1":195,"q2":195,"q3":195,"max":195,"minLabel":"output_documentation","maxLabel":"output_documentation","q1Label":"output_documentation","q2Label":"output_documentation","q3Label":"output_documentation"},"reads":{"mean":208896,"min":208896,"q1":208896,"q2":208896,"q3":208896,"max":208896,"minLabel":"output_documentation","maxLabel":"output_documentation","q1Label":"output_documentation","q2Label":"output_documentation","q3Label":"output_documentation"},"writes":null,"cpuUsage":null,"memUsage":{"mean":4.04,"min":4.04,"q1":4.04,"q2":4.04,"q3":4.04,"max":4.04,"minLabel":"output_documentation","maxLabel":"output_documentation","q1Label":"output_documentation","q2Label":"output_documentation","q3Label":"output_documentation"},"timeUsage":null},"db_search_comet":{"cpu":{"mean":66.9,"min":49.2,"q1":58.05,"q2":66.9,"q3":75.75,"max":84.6,"minLabel":"db_search_comet (1)","maxLabel":"db_search_comet (3)","q1Label":"db_search_comet (1)","q2Label":"db_search_comet (1)","q3Label":"db_search_comet (1)"},"mem":{"mean":278560768,"min":278560768,"q1":278560768,"q2":278560768,"q3":278560768,"max":278560768,"minLabel":"db_search_comet (3)","maxLabel":"db_search_comet (1)","q1Label":"db_search_comet (3)","q2Label":"db_search_comet (3)","q3Label":"db_search_comet (3)"},"time":{"mean":2033,"min":1959,"q1":1996,"q2":2033,"q3":2070,"max":2107,"minLabel":"db_search_comet (1)","maxLabel":"db_search_comet (3)","q1Label":"db_search_comet (1)","q2Label":"db_search_comet (1)","q3Label":"db_search_comet (1)"},"reads":null,"writes":null,"cpuUsage":{"mean":33.45,"min":24.6,"q1":29.03,"q2":33.45,"q3":37.88,"max":42.3,"minLabel":"db_search_comet (1)","maxLabel":"db_search_comet (3)","q1Label":"db_search_comet (1)","q2Label":"db_search_comet (1)","q3Label":"db_search_comet (1)"},"memUsage":{"mean":4.32,"min":4.32,"q1":4.32,"q2":4.32,"q3":4.32,"max":4.32,"minLabel":"db_search_comet (3)","maxLabel":"db_search_comet (1)","q1Label":"db_search_comet (3)","q2Label":"db_search_comet (3)","q3Label":"db_search_comet (3)"},"timeUsage":null},"generate_decoy_database":{"cpu":{"mean":42.1,"min":42.1,"q1":42.1,"q2":42.1,"q3":42.1,"max":42.1,"minLabel":"generate_decoy_database (1)","maxLabel":"generate_decoy_database (1)","q1Label":"generate_decoy_database (1)","q2Label":"generate_decoy_database (1)","q3Label":"generate_decoy_database (1)"},"mem":{"mean":278470656,"min":278470656,"q1":278470656,"q2":278470656,"q3":278470656,"max":278470656,"minLabel":"generate_decoy_database (1)","maxLabel":"generate_decoy_database (1)","q1Label":"generate_decoy_database (1)","q2Label":"generate_decoy_database (1)","q3Label":"generate_decoy_database (1)"},"time":{"mean":4999,"min":4999,"q1":4999,"q2":4999,"q3":4999,"max":4999,"minLabel":"generate_decoy_database (1)","maxLabel":"generate_decoy_database (1)","q1Label":"generate_decoy_database (1)","q2Label":"generate_decoy_database (1)","q3Label":"generate_decoy_database (1)"},"reads":{"mean":90112,"min":90112,"q1":90112,"q2":90112,"q3":90112,"max":90112,"minLabel":"generate_decoy_database (1)","maxLabel":"generate_decoy_database (1)","q1Label":"generate_decoy_database (1)","q2Label":"generate_decoy_database (1)","q3Label":"generate_decoy_database (1)"},"writes":null,"cpuUsage":{"mean":21.05,"min":21.05,"q1":21.05,"q2":21.05,"q3":21.05,"max":21.05,"minLabel":"generate_decoy_database (1)","maxLabel":"generate_decoy_database (1)","q1Label":"generate_decoy_database (1)","q2Label":"generate_decoy_database (1)","q3Label":"generate_decoy_database (1)"},"memUsage":{"mean":4.32,"min":4.32,"q1":4.32,"q2":4.32,"q3":4.32,"max":4.32,"minLabel":"generate_decoy_database (1)","maxLabel":"generate_decoy_database (1)","q1Label":"generate_decoy_database (1)","q2Label":"generate_decoy_database (1)","q3Label":"generate_decoy_database (1)"},"timeUsage":{"mean":0.07,"min":0.07,"q1":0.07,"q2":0.07,"q3":0.07,"max":0.07,"minLabel":"generate_decoy_database (1)","maxLabel":"generate_decoy_database (1)","q1Label":"generate_decoy_database (1)","q2Label":"generate_decoy_database (1)","q3Label":"generate_decoy_database (1)"}}}
+Apr-05 17:52:19.005 [main] DEBUG nextflow.trace.TimelineObserver - Flow completing -- rendering html timeline
+Apr-05 17:52:19.066 [main] DEBUG nextflow.CacheDB - Closing CacheDB done
+Apr-05 17:52:19.079 [main] DEBUG nextflow.script.ScriptRunner - > Execution complete -- Goodbye

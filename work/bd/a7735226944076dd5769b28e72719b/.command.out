@@ -1,0 +1,16 @@
+Version 2.4.0-HEAD-2018-10-26 of CometAdapter is available at www.OpenMS.de
+Comet is writing the default parameter file...
+Executing: comet.exe
+Executed comet.exe successfully!
+Progress of 'loading spectra list':
+-- done [took 0.73 s (CPU), 0.39 s (Wall)] -- 
+Progress of 'loading chromatogram list':
+-- done [took 0.00 s (CPU), 0.00 s (Wall)] -- 
+FATAL: External invocation of comet.exe failed. Standard output and error were:
+<Executing: comet.exe> occurred 2 times
+ Comet version "2016.01 rev. 3"
+
+
+
+11
+CometAdapter took 0.74 s (wall), 0.85 s (CPU), 0.02 s (system), 0.83 s (user).

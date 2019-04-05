@@ -1,0 +1,3 @@
+Version 2.4.0-HEAD-2018-10-26 of DecoyDatabase is available at www.OpenMS.de
+Warning: Only one FASTA input file was provided, which might not contain contaminants.You probably want to have them! Just add the contaminant file to the input file list 'in'.
+DecoyDatabase took 3.56 s (wall), 3.47 s (CPU), 0.05 s (system), 3.42 s (user).

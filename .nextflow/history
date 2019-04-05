@@ -1,0 +1,1 @@
+2019-04-05 17:51:28	51.1s	crazy_boyd	ERR	124cbbe5a070e1ee1dec25da1f65c9baea179b91	0f2d276e-a73d-4ecd-a59b-d970a23c3b16	nextflow run nf-core/mhcquant -profile test,docker -r 1.2.6

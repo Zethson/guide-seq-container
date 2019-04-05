@@ -1,0 +1,146 @@
+<html>
+<head>
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <meta name="description" content="nf-core/mhcquant: Identify and quantify peptides from mass spectrometry raw data">
+  <title>nf-core/mhcquant Pipeline Report</title>
+</head>
+<body>
+<div style="font-family: Helvetica, Arial, sans-serif; padding: 30px; max-width: 800px; margin: 0 auto;">
+
+<h1>nf-core/mhcquant v1.2.6</h1>
+<h2>Run Name: crazy_boyd</h2>
+
+
+    <div style="color: #a94442; background-color: #f2dede; border-color: #ebccd1; padding: 15px; margin-bottom: 20px; border: 1px solid transparent; border-radius: 4px;">
+        <h4 style="margin-top:0; color: inherit;">nf-core/mhcquant execution completed unsuccessfully!</h4>
+        <p>The exit status of the task that caused the workflow execution to fail was: <code>9</code>.</p>
+        <p>The full error message was:</p>
+        <pre style="white-space: pre-wrap; overflow: visible; margin-bottom: 0;">Error executing process > 'db_search_comet (3)'
+
+Caused by:
+  Process `db_search_comet (3)` terminated with an error exit status (9)
+
+Command executed:
+
+  CometAdapter  -in MM15_Melanom_1_B_1.mzML \
+                -out MM15_Melanom_1_B_1.idXML \
+                -threads 2 \
+                -database test_decoy.fasta \
+                -precursor_mass_tolerance 5 \
+                -fragment_bin_tolerance 0.02 \
+                -fragment_bin_offset 0 \
+                -num_hits 1 \
+                -digest_mass_range 800:2500 \
+                -max_variable_mods_in_peptide 3 \
+                -allowed_missed_cleavages 0 \
+                -precursor_charge 2:3 \
+                -activation_method ALL \
+                -use_NL_ions true \
+                -variable_modifications 'Oxidation (M)' \
+                -fixed_modifications  \
+                -enzyme 'unspecific cleavage' \
+                -spectrum_batch_size 500
+
+Command exit status:
+  9
+
+Command output:
+  Version 2.4.0-HEAD-2018-10-26 of CometAdapter is available at www.OpenMS.de
+  Comet is writing the default parameter file...
+  Executing: comet.exe
+  Executed comet.exe successfully!
+  Progress of 'loading spectra list':
+  
+  -- done [took 0.71 s (CPU), 0.40 s (Wall)] -- 
+  Progress of 'loading chromatogram list':
+  
+  -- done [took 0.00 s (CPU), 0.00 s (Wall)] -- 
+  FATAL: External invocation of comet.exe failed. Standard output and error were:
+  <Executing: comet.exe> occurred 2 times
+   Comet version "2016.01 rev. 3"
+  
+  
+  
+  11
+  CometAdapter took 0.74 s (wall), 0.82 s (CPU), 0.02 s (system), 0.80 s (user).
+
+Command wrapper:
+  Version 2.4.0-HEAD-2018-10-26 of CometAdapter is available at www.OpenMS.de
+  Comet is writing the default parameter file...
+  Executing: comet.exe
+  Executed comet.exe successfully!
+  Progress of 'loading spectra list':
+  
+  -- done [took 0.71 s (CPU), 0.40 s (Wall)] -- 
+  Progress of 'loading chromatogram list':
+  
+  -- done [took 0.00 s (CPU), 0.00 s (Wall)] -- 
+  FATAL: External invocation of comet.exe failed. Standard output and error were:
+  <Executing: comet.exe> occurred 2 times
+   Comet version "2016.01 rev. 3"
+  
+  
+  
+  11
+  CometAdapter took 0.74 s (wall), 0.82 s (CPU), 0.02 s (system), 0.80 s (user).
+
+Work dir:
+  /home/zeth/docker_images/guide_seq_container/work/a7/a75a6514e89f866d3af65403ab039d
+
+Tip: view the complete command output by changing to the process work dir and entering the command `cat .command.out`</pre>
+    </div>
+    
+
+<p>The workflow was completed at <strong>Fri Apr 05 17:52:18 CEST 2019</strong> (duration: <strong>49.5s</strong>)</p>
+<p>The command used to launch the workflow was as follows:</p>
+<pre style="white-space: pre-wrap; overflow: visible; background-color: #ededed; padding: 15px; border-radius: 4px; margin-bottom:30px;">nextflow run nf-core/mhcquant -profile test,docker -r 1.2.6</pre>
+
+<h3>Pipeline Configuration:</h3>
+<table style="width:100%; max-width:100%; border-spacing: 0; border-collapse: collapse; border:0; margin-bottom: 30px;">
+    <tbody style="border-bottom: 1px solid #ddd;">
+        <tr><th style='text-align:left; padding: 8px 0; line-height: 1.42857143; vertical-align: top; border-top: 1px solid #ddd;'>Pipeline Name</th><td style='text-align:left; padding: 8px; line-height: 1.42857143; vertical-align: top; border-top: 1px solid #ddd;'><pre style='white-space: pre-wrap; overflow: visible;'>nf-core/mhcquant</pre></td></tr>
+<tr><th style='text-align:left; padding: 8px 0; line-height: 1.42857143; vertical-align: top; border-top: 1px solid #ddd;'>Pipeline Version</th><td style='text-align:left; padding: 8px; line-height: 1.42857143; vertical-align: top; border-top: 1px solid #ddd;'><pre style='white-space: pre-wrap; overflow: visible;'>1.2.6</pre></td></tr>
+<tr><th style='text-align:left; padding: 8px 0; line-height: 1.42857143; vertical-align: top; border-top: 1px solid #ddd;'>Run Name</th><td style='text-align:left; padding: 8px; line-height: 1.42857143; vertical-align: top; border-top: 1px solid #ddd;'><pre style='white-space: pre-wrap; overflow: visible;'>crazy_boyd</pre></td></tr>
+<tr><th style='text-align:left; padding: 8px 0; line-height: 1.42857143; vertical-align: top; border-top: 1px solid #ddd;'>mzMLs</th><td style='text-align:left; padding: 8px; line-height: 1.42857143; vertical-align: top; border-top: 1px solid #ddd;'><pre style='white-space: pre-wrap; overflow: visible;'>[https://github.com/nf-core/test-datasets/raw/mhcquant/MM15_Melanom_1_A_1.mzML, https://github.com/nf-core/test-datasets/raw/mhcquant/MM15_Melanom_1_B_1.mzML, https://github.com/nf-core/test-datasets/raw/mhcquant/MM15_Melanom_2_A_1.mzML, https://github.com/nf-core/test-datasets/raw/mhcquant/MM15_Melanom_2_B_1.mzML]</pre></td></tr>
+<tr><th style='text-align:left; padding: 8px 0; line-height: 1.42857143; vertical-align: top; border-top: 1px solid #ddd;'>Fasta Ref</th><td style='text-align:left; padding: 8px; line-height: 1.42857143; vertical-align: top; border-top: 1px solid #ddd;'><pre style='white-space: pre-wrap; overflow: visible;'>[https://github.com/nf-core/test-datasets/raw/mhcquant/test.fasta]</pre></td></tr>
+<tr><th style='text-align:left; padding: 8px 0; line-height: 1.42857143; vertical-align: top; border-top: 1px solid #ddd;'>Predictions</th><td style='text-align:left; padding: 8px; line-height: 1.42857143; vertical-align: top; border-top: 1px solid #ddd;'><pre style='white-space: pre-wrap; overflow: visible;'>false</pre></td></tr>
+<tr><th style='text-align:left; padding: 8px 0; line-height: 1.42857143; vertical-align: top; border-top: 1px solid #ddd;'>SubsetFDR</th><td style='text-align:left; padding: 8px; line-height: 1.42857143; vertical-align: top; border-top: 1px solid #ddd;'><pre style='white-space: pre-wrap; overflow: visible;'>false</pre></td></tr>
+<tr><th style='text-align:left; padding: 8px 0; line-height: 1.42857143; vertical-align: top; border-top: 1px solid #ddd;'>Alleles</th><td style='text-align:left; padding: 8px; line-height: 1.42857143; vertical-align: top; border-top: 1px solid #ddd;'><pre style='white-space: pre-wrap; overflow: visible;'>[https://github.com/nf-core/test-datasets/raw/mhcquant/alleles.tsv]</pre></td></tr>
+<tr><th style='text-align:left; padding: 8px 0; line-height: 1.42857143; vertical-align: top; border-top: 1px solid #ddd;'>Variants</th><td style='text-align:left; padding: 8px; line-height: 1.42857143; vertical-align: top; border-top: 1px solid #ddd;'><pre style='white-space: pre-wrap; overflow: visible;'>[https://github.com/nf-core/test-datasets/raw/mhcquant/GRIAFFLKY_snpeff.vcf]</pre></td></tr>
+<tr><th style='text-align:left; padding: 8px 0; line-height: 1.42857143; vertical-align: top; border-top: 1px solid #ddd;'>Centroidisation</th><td style='text-align:left; padding: 8px; line-height: 1.42857143; vertical-align: top; border-top: 1px solid #ddd;'><pre style='white-space: pre-wrap; overflow: visible;'>false</pre></td></tr>
+<tr><th style='text-align:left; padding: 8px 0; line-height: 1.42857143; vertical-align: top; border-top: 1px solid #ddd;'>Max Memory</th><td style='text-align:left; padding: 8px; line-height: 1.42857143; vertical-align: top; border-top: 1px solid #ddd;'><pre style='white-space: pre-wrap; overflow: visible;'>6 GB</pre></td></tr>
+<tr><th style='text-align:left; padding: 8px 0; line-height: 1.42857143; vertical-align: top; border-top: 1px solid #ddd;'>Max CPUs</th><td style='text-align:left; padding: 8px; line-height: 1.42857143; vertical-align: top; border-top: 1px solid #ddd;'><pre style='white-space: pre-wrap; overflow: visible;'>2</pre></td></tr>
+<tr><th style='text-align:left; padding: 8px 0; line-height: 1.42857143; vertical-align: top; border-top: 1px solid #ddd;'>Max Time</th><td style='text-align:left; padding: 8px; line-height: 1.42857143; vertical-align: top; border-top: 1px solid #ddd;'><pre style='white-space: pre-wrap; overflow: visible;'>2d</pre></td></tr>
+<tr><th style='text-align:left; padding: 8px 0; line-height: 1.42857143; vertical-align: top; border-top: 1px solid #ddd;'>Output dir</th><td style='text-align:left; padding: 8px; line-height: 1.42857143; vertical-align: top; border-top: 1px solid #ddd;'><pre style='white-space: pre-wrap; overflow: visible;'>./results</pre></td></tr>
+<tr><th style='text-align:left; padding: 8px 0; line-height: 1.42857143; vertical-align: top; border-top: 1px solid #ddd;'>Working dir</th><td style='text-align:left; padding: 8px; line-height: 1.42857143; vertical-align: top; border-top: 1px solid #ddd;'><pre style='white-space: pre-wrap; overflow: visible;'>/home/zeth/docker_images/guide_seq_container/work</pre></td></tr>
+<tr><th style='text-align:left; padding: 8px 0; line-height: 1.42857143; vertical-align: top; border-top: 1px solid #ddd;'>Container Engine</th><td style='text-align:left; padding: 8px; line-height: 1.42857143; vertical-align: top; border-top: 1px solid #ddd;'><pre style='white-space: pre-wrap; overflow: visible;'>docker</pre></td></tr>
+<tr><th style='text-align:left; padding: 8px 0; line-height: 1.42857143; vertical-align: top; border-top: 1px solid #ddd;'>Container</th><td style='text-align:left; padding: 8px; line-height: 1.42857143; vertical-align: top; border-top: 1px solid #ddd;'><pre style='white-space: pre-wrap; overflow: visible;'>nfcore/mhcquant:1.2.6</pre></td></tr>
+<tr><th style='text-align:left; padding: 8px 0; line-height: 1.42857143; vertical-align: top; border-top: 1px solid #ddd;'>Current home</th><td style='text-align:left; padding: 8px; line-height: 1.42857143; vertical-align: top; border-top: 1px solid #ddd;'><pre style='white-space: pre-wrap; overflow: visible;'>/home/zeth</pre></td></tr>
+<tr><th style='text-align:left; padding: 8px 0; line-height: 1.42857143; vertical-align: top; border-top: 1px solid #ddd;'>Current user</th><td style='text-align:left; padding: 8px; line-height: 1.42857143; vertical-align: top; border-top: 1px solid #ddd;'><pre style='white-space: pre-wrap; overflow: visible;'>zeth</pre></td></tr>
+<tr><th style='text-align:left; padding: 8px 0; line-height: 1.42857143; vertical-align: top; border-top: 1px solid #ddd;'>Current path</th><td style='text-align:left; padding: 8px; line-height: 1.42857143; vertical-align: top; border-top: 1px solid #ddd;'><pre style='white-space: pre-wrap; overflow: visible;'>/home/zeth/docker_images/guide_seq_container</pre></td></tr>
+<tr><th style='text-align:left; padding: 8px 0; line-height: 1.42857143; vertical-align: top; border-top: 1px solid #ddd;'>Script dir</th><td style='text-align:left; padding: 8px; line-height: 1.42857143; vertical-align: top; border-top: 1px solid #ddd;'><pre style='white-space: pre-wrap; overflow: visible;'>/home/zeth/.nextflow/assets/nf-core/mhcquant</pre></td></tr>
+<tr><th style='text-align:left; padding: 8px 0; line-height: 1.42857143; vertical-align: top; border-top: 1px solid #ddd;'>Config Profile</th><td style='text-align:left; padding: 8px; line-height: 1.42857143; vertical-align: top; border-top: 1px solid #ddd;'><pre style='white-space: pre-wrap; overflow: visible;'>test,docker</pre></td></tr>
+<tr><th style='text-align:left; padding: 8px 0; line-height: 1.42857143; vertical-align: top; border-top: 1px solid #ddd;'>Date Started</th><td style='text-align:left; padding: 8px; line-height: 1.42857143; vertical-align: top; border-top: 1px solid #ddd;'><pre style='white-space: pre-wrap; overflow: visible;'>Fri Apr 05 17:51:28 CEST 2019</pre></td></tr>
+<tr><th style='text-align:left; padding: 8px 0; line-height: 1.42857143; vertical-align: top; border-top: 1px solid #ddd;'>Date Completed</th><td style='text-align:left; padding: 8px; line-height: 1.42857143; vertical-align: top; border-top: 1px solid #ddd;'><pre style='white-space: pre-wrap; overflow: visible;'>Fri Apr 05 17:52:18 CEST 2019</pre></td></tr>
+<tr><th style='text-align:left; padding: 8px 0; line-height: 1.42857143; vertical-align: top; border-top: 1px solid #ddd;'>Pipeline script file path</th><td style='text-align:left; padding: 8px; line-height: 1.42857143; vertical-align: top; border-top: 1px solid #ddd;'><pre style='white-space: pre-wrap; overflow: visible;'>/home/zeth/.nextflow/assets/nf-core/mhcquant/main.nf</pre></td></tr>
+<tr><th style='text-align:left; padding: 8px 0; line-height: 1.42857143; vertical-align: top; border-top: 1px solid #ddd;'>Pipeline script hash ID</th><td style='text-align:left; padding: 8px; line-height: 1.42857143; vertical-align: top; border-top: 1px solid #ddd;'><pre style='white-space: pre-wrap; overflow: visible;'>5cdb69a03c8f131f6061d25757c1341d</pre></td></tr>
+<tr><th style='text-align:left; padding: 8px 0; line-height: 1.42857143; vertical-align: top; border-top: 1px solid #ddd;'>Pipeline repository Git URL</th><td style='text-align:left; padding: 8px; line-height: 1.42857143; vertical-align: top; border-top: 1px solid #ddd;'><pre style='white-space: pre-wrap; overflow: visible;'>https://github.com/nf-core/mhcquant.git</pre></td></tr>
+<tr><th style='text-align:left; padding: 8px 0; line-height: 1.42857143; vertical-align: top; border-top: 1px solid #ddd;'>Pipeline repository Git Commit</th><td style='text-align:left; padding: 8px; line-height: 1.42857143; vertical-align: top; border-top: 1px solid #ddd;'><pre style='white-space: pre-wrap; overflow: visible;'>124cbbe5a070e1ee1dec25da1f65c9baea179b91</pre></td></tr>
+<tr><th style='text-align:left; padding: 8px 0; line-height: 1.42857143; vertical-align: top; border-top: 1px solid #ddd;'>Pipeline Git branch/tag</th><td style='text-align:left; padding: 8px; line-height: 1.42857143; vertical-align: top; border-top: 1px solid #ddd;'><pre style='white-space: pre-wrap; overflow: visible;'>1.2.6</pre></td></tr>
+<tr><th style='text-align:left; padding: 8px 0; line-height: 1.42857143; vertical-align: top; border-top: 1px solid #ddd;'>Nextflow Version</th><td style='text-align:left; padding: 8px; line-height: 1.42857143; vertical-align: top; border-top: 1px solid #ddd;'><pre style='white-space: pre-wrap; overflow: visible;'>19.01.0</pre></td></tr>
+<tr><th style='text-align:left; padding: 8px 0; line-height: 1.42857143; vertical-align: top; border-top: 1px solid #ddd;'>Nextflow Build</th><td style='text-align:left; padding: 8px; line-height: 1.42857143; vertical-align: top; border-top: 1px solid #ddd;'><pre style='white-space: pre-wrap; overflow: visible;'>5050</pre></td></tr>
+<tr><th style='text-align:left; padding: 8px 0; line-height: 1.42857143; vertical-align: top; border-top: 1px solid #ddd;'>Nextflow Compile Timestamp</th><td style='text-align:left; padding: 8px; line-height: 1.42857143; vertical-align: top; border-top: 1px solid #ddd;'><pre style='white-space: pre-wrap; overflow: visible;'>22-01-2019 11:19 UTC</pre></td></tr>
+    </tbody>
+</table>
+
+<p>nf-core/mhcquant</p>
+<p><a href="https://github.com/nf-core/mhcquant">https://github.com/nf-core/mhcquant</a></p>
+
+</div>
+
+</body>
+</html>
