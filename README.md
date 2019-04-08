@@ -15,7 +15,7 @@ You can download a the reference genome using the download_reference_genome.sh s
 
 Then run the large test:
 ```bash
-python guideseq/guideseq/guideseq.py all -m test_manifest.yaml
+python guideseq_seq_wf/guideseq/guideseq.py all -m test/test_manifest.yaml
 ```
 
 # Building a singularity image
