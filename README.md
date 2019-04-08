@@ -13,9 +13,14 @@ You can download a the reference genome using the download_reference_genome.sh s
 ./download_test_data.sh
 ```
 
-Then run the large test:
+Then run the small test from the root directory of the guide_seq_wf:
 ```bash
-python guide_seq_wf/guideseq/guideseq.py all -m test/test_manifest.yaml
+python guideseq/guideseq.py all -m test/test_manifest.yaml
+```
+
+To run all tests:
+```
+nosetests
 ```
 
 # Building a singularity image
