@@ -8,10 +8,10 @@ RUN apt-get install git -y
 RUN apt-get install python2.7 python-pip -y
 
 # install zlib dev, wget, unzip
-RUN apt-get install libz-dev wget unzip
-#RUN apt-get install -y liblzma-dev
-#RUN apt-get install -y libbz2-dev
-#RUN apt-get install -y libncurses5-dev libncursesw5-dev
+RUN apt-get install -y libz-dev wget unzip
+RUN apt-get install -y libbz2-dev
+RUN apt-get install -y liblzma-dev
+RUN apt-get install -y libncurses5-dev libncursesw5-dev
 
 # Add sudo
 RUN apt-get -y install sudo
@@ -38,21 +38,15 @@ RUN conda update conda
 RUN conda update anaconda
 RUN conda update --all 
 
-# RUN apt-get install bwa bedtools -y
-RUN pip2 install nose
-RUN pip2 install numpy==1.14.1
-
 # Install bwa
 RUN git clone https://github.com/lh3/bwa.git
 RUN cd bwa && \
-    git checkout tags/0.7.9a && \
     make
 ENV PATH /bwa:$PATH      
 
 # Install bedtools
 RUN git clone https://github.com/arq5x/bedtools2.git
 RUN cd bedtools2 && \
-    git checkout tags/v2.25.0 && \
     make
 ENV PATH /bedtools2/bin:$PATH
 
@@ -64,12 +58,14 @@ COPY download_test_data.sh /home/ubuntu/download_test_data.sh
 USER root
 RUN chmod +x download_reference_genome.sh
 RUN chmod +x download_test_data.sh
+RUN cd bwa && mv bwa /usr/local/bin
+RUN cd bedtools2/bin && mv * /usr/local/bin
 
 USER ubuntu
 
 # install guide-seq with dependencies
 RUN git clone --recursive https://github.com/Zethson/guide_seq_wf
-RUN cd guide_seq_wf && git checkout feature/python3
-RUN cd guide_seq_wf && pip2 install -r requirements.txt && pip freeze
+RUN cd guide_seq_wf && git checkout feature/python_3_transition
+RUN cd guide_seq_wf && pip install -r requirements.txt && pip freeze
 
 
