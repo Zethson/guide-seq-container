@@ -1,5 +1,0 @@
-task_id	hash	native_id	name	status	exit	submit	duration	realtime	%cpu	rss	vmem	rchar	wchar
-1	71/a7088d	19590	output_documentation	COMPLETED	0	2019-04-05 17:51:30.427	1.7s	195ms	0.0%	43.2 MB	248.2 MB	3.2 MB	224 B
-2	03/3992ec	19822	generate_decoy_database (1)	COMPLETED	0	2019-04-05 17:51:33.858	6.6s	5s	42.1%	33.4 MB	265.6 MB	3.1 MB	144 B
-5	a7/a75a65	20187	db_search_comet (3)	FAILED	9	2019-04-05 17:51:49.983	6.8s	2.1s	84.6%	33.9 MB	265.7 MB	3.1 MB	120 B
-3	bd/a77352	20526	db_search_comet (1)	FAILED	9	2019-04-05 17:51:58.325	6.2s	2s	49.2%	33.9 MB	265.7 MB	3.1 MB	136 B

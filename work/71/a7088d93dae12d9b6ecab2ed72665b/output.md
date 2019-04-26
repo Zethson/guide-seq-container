@@ -1,1 +1,0 @@
-/home/zeth/.nextflow/assets/nf-core/mhcquant/docs/output.md
