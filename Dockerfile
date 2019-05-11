@@ -20,7 +20,6 @@ RUN pip2 install numpy==1.14.1
 # Install bwa
 RUN git clone https://github.com/lh3/bwa.git
 RUN cd bwa && \
-    git checkout tags/0.7.9a && \
     make
 ENV PATH /bwa:$PATH      
 
@@ -40,7 +39,7 @@ RUN chmod +x download_reference_genome.sh
 RUN chmod +x download_test_data.sh
 
 # install guide-seq with dependencies
-RUN git clone --recursive https://github.com/Zethson/guide_seq_wf
+RUN git clone --recursive -b master https://github.com/Zethson/guide_seq_wf
 RUN cd guide_seq_wf && pip2 install -r requirements.txt && pip freeze
 
 
