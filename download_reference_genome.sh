@@ -4,6 +4,6 @@ if [ -f $FILE ]; then
 else
    echo "File $FILE does not exist."
    echo "Downloading $FILE ..."
-   wget http://www.broadinstitute.org/ftp/pub/seq/references/Homo_sapiens_assembly19.fasta
+   wget https://s3.amazonaws.com/juicerawsmirror/opt/juicer/references/Homo_sapiens_assembly19.fasta
 fi
 
