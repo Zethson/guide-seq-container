@@ -39,7 +39,7 @@ RUN chmod +x download_reference_genome.sh
 RUN chmod +x download_test_data.sh
 
 # install guide-seq with dependencies
-RUN git clone --recursive -b master https://github.com/Zethson/guide_seq_wf
-RUN cd guide_seq_wf && pip2 install -r requirements.txt && pip freeze
+RUN git clone --recursive -b master https://github.com/aryeelab/guideseq
+RUN cd guideseq && pip2 install -r requirements.txt && pip freeze
 
 
