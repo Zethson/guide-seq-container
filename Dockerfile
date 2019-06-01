@@ -20,6 +20,7 @@ RUN pip2 install numpy==1.14.1
 # Install bwa
 RUN git clone https://github.com/lh3/bwa.git
 RUN cd bwa && \
+    git checkout tags/0.7.9a && \
     make
 ENV PATH /bwa:$PATH      
 
