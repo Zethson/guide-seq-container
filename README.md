@@ -2,16 +2,18 @@
 This is a docker image for the GUIDE-Seq implementation from [Tsai lab](https://www.tsailab.com/).
 # Usage 
 ```bash
-docker build -t guide_seq:latest .
-docker run --rm -it guide_seq:latest /bin/sh
+docker pull ghcr.io/zethson/guide_seq:latest
+docker run --rm -it ghcr.io/zethson/guide_seq:latest /bin/bash
 ```
+
+The executable to start the workflows is ```guideseq/guideseq.py```.
 
 # Testing
 Inside the container run
 ```bash
 git clone https://github.com/tsailabSJ/guideseq
-cd guideseq
-python guideseq/guideseq.py test/test_manifest.yml
+cd guideseq/test
+guideseq.py all -m test_manifest.yaml
 ```
 
 # Building a singularity image
@@ -24,7 +26,6 @@ docker run -v /var/run/docker.sock:/var/run/docker.sock \
 -v /tmp/singularity_output:/output \
 --privileged -t --rm \
 singularityware/docker2singularity \
-guide_seq:latest
+ghcr.io/zethson/guide_seq:latest
 ```
 Now you can find your shiny new singularity image in /tmp/singularity_output
-

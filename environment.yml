@@ -6,5 +6,5 @@ channels:
     - tsailabSJ
 dependencies:
     - defaults::python=3.7
-    - tsailabSJ::guide_seq
+    - tsailabSJ::guide_seq==1.0.2
 
