@@ -6,7 +6,7 @@ docker pull ghcr.io/zethson/guide_seq:latest
 docker run --rm -it ghcr.io/zethson/guide_seq:latest /bin/bash
 ```
 
-The executable to start the workflows is ```guideseq/guideseq.py```.
+The executable to start the workflows is ```guideseq.py```.
 
 # Testing
 Inside the container run
