@@ -1,0 +1,22 @@
+name: Publish Container to Docker Packages
+
+on:
+  release:
+      types: [published]
+  push:
+      branches:
+        - master
+jobs:
+  publish_release:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@master
+    - name: Publish to Registry
+      uses: elgohr/Publish-Docker-Github-Action@master
+      with:
+        name: zethson/guide_seq
+        username: zethson
+        password: '${{ secrets.GH_TOKEN }}'
+        registry: ghcr.io
+        tags: "latest"
+
