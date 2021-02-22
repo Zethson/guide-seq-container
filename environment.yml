@@ -1,0 +1,10 @@
+name: guide_seq
+channels:
+    - defaults
+    - conda-forge
+    - bioconda
+    - tsailabSJ
+dependencies:
+    - defaults::python=3.7
+    - tsailabSJ::guide_seq
+

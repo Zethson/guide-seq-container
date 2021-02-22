@@ -1,26 +1,17 @@
-[![Build Status](https://travis-ci.org/Zethson/guide-seq-container.svg?branch=master)](https://travis-ci.org/Zethson/guide-seq-container)
 # Docker container for the guide-seq package
-This is a docker image for the GUIDE-Seq implementation from [Aryeelab](https://github.com/aryeelab/guideseq).
+This is a docker image for the GUIDE-Seq implementation from [Tsai lab](https://www.tsailab.com/).
 # Usage 
 ```bash
 docker build -t guide_seq:latest .
 docker run --rm -it guide_seq:latest /bin/sh
 ```
 
-You can download a the reference genome using the download_reference_genome.sh script and test data using the download_test_data.sh script:
+# Testing
+Inside the container run
 ```bash
-./download_reference_genome.sh
-./download_test_data.sh
-```
-
-Then run the small test from the root directory of the guide_seq_wf:
-```bash
-python guideseq/guideseq.py all -m test/test_manifest.yaml
-```
-
-To run all tests:
-```
-nosetests
+git clone https://github.com/tsailabSJ/guideseq
+cd guideseq
+python guideseq/guideseq.py test/test_manifest.yml
 ```
 
 # Building a singularity image
@@ -36,7 +27,4 @@ singularityware/docker2singularity \
 guide_seq:latest
 ```
 Now you can find your shiny new singularity image in /tmp/singularity_output
-
-
-
 
